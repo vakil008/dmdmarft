@@ -53,16 +53,6 @@ export default function Login() {
               dispatch(setUserToken(jwToken));
             }
           }
-
-          // if (response && data && status == 200) {
-          //   // if (userDetails) {
-          //   //   //this.encryt(user_id ? user_id : id);
-          //   //   setUserDataInAsyncStorage(
-          //   //     "profileWalkThrough",
-          //   //     (allWalkThrough && allWalkThrough) == "false" ? "false" : "true"
-          //   //   );
-          //   // }
-          // }
         })
         .catch((error) => {
           console.log("error making login call --> ", error);

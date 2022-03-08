@@ -3,13 +3,13 @@ import { Navigate } from "react-router-dom";
 import AppHeader from "./header";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-
+import { useSelector } from "react-redux";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const PrivateLayout = () => {
   const mdTheme = createTheme();
-  const loginTokenRes = false;
-
+  const loginTokenRes = useSelector((state) => state.user.loginToken);
+  console.log("loginTokenRes", loginTokenRes);
   return (
     <>
       {loginTokenRes ? (

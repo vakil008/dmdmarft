@@ -21,6 +21,8 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PeopleIcon from "@mui/icons-material/People";
 import { useNavigate, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { userLogout } from "../../store/actions/user";
 const drawerWidth = 240;
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -73,6 +75,11 @@ const AppHeader = () => {
   };
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const logout = () => {
+    dispatch(userLogout());
+  };
   return (
     <>
       <AppBar position="absolute" open={open}>
@@ -149,7 +156,7 @@ const AppHeader = () => {
             </ListItemIcon>
             <ListItemText primary="Leads" />
           </ListItemButton>
-          <ListItemButton onClick={() => navigate("/addUser")}>
+          <ListItemButton onClick={() => navigate("/lead")}>
             <ListItemIcon>
               <ShoppingCartIcon />
             </ListItemIcon>
@@ -162,7 +169,7 @@ const AppHeader = () => {
             <ListItemText primary="Lead Resource" />
           </ListItemButton>
           <Divider sx={{ my: 1 }} />
-          <ListItemButton>
+          <ListItemButton onClick={() => logout()}>
             <ListItemIcon>
               <PeopleIcon />
             </ListItemIcon>

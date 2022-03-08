@@ -1,8 +1,9 @@
 import { Outlet } from "react-router";
 import { Navigate } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 const PublicLayout = () => {
-  const loginTokenRes = false;
+  const loginTokenRes = useSelector((state) => state.user.loginToken);
+  console.log("loginTokenRes", loginTokenRes);
   console.log("PublicLayout");
   return (
     <>

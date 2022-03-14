@@ -6,6 +6,7 @@ import Login from "../pages//Login";
 import Home from "../pages/Home";
 import AddUser from "../pages/AddUser";
 import Lead from "../pages/Lead";
+import AddBranch from "../pages/AddBranch";
 
 const AppRouter = () => {
   return (
@@ -17,6 +18,7 @@ const AppRouter = () => {
         <Route path="/dashboard" element={<Home />} />
         <Route path="/addUser" element={<AddUser />} />
         <Route path="/lead" element={<Lead />} />
+        <Route path="/addbranch" element={<AddBranch />} />
       </Route>
     </Routes>
   );

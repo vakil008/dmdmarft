@@ -19,10 +19,12 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItem from "@mui/material/ListItem";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import PeopleIcon from "@mui/icons-material/People";
 import { useNavigate, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { userLogout } from "../../store/actions/user";
+import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 const drawerWidth = 240;
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -131,31 +133,34 @@ const AppHeader = () => {
         </Toolbar>
         <Divider />
         <List component="nav">
-          <ListItem button component={Link} to="/addUser">
+          <ListItem button component={Link} to="/dashboard">
             <ListItemIcon>
               <DashboardIcon />
             </ListItemIcon>
             <ListItemText primary="Dashboard" />
           </ListItem>
 
-          <ListItemButton onClick={() => navigate("/addUser")}>
+          <ListItemButton onClick={() => navigate("/addbranch")}>
             <ListItemIcon>
-              <ShoppingCartIcon />
+              <AccountTreeIcon />
             </ListItemIcon>
-            <ListItemText primary="Add User" />
+            <ListItemText primary="Add Branch" />
           </ListItemButton>
+
           <ListItemButton onClick={() => navigate("/addUser")}>
             <ListItemIcon>
-              <ShoppingCartIcon />
+              <PersonAddAltIcon />
             </ListItemIcon>
-            <ListItemText primary="All Users" />
+            <ListItemText primary="Add Users" />
           </ListItemButton>
-          <ListItemButton onClick={() => navigate("/addUser")}>
+
+          <ListItemButton onClick={() => navigate("/lead")}>
             <ListItemIcon>
-              <ShoppingCartIcon />
+              <ShoppingCartIcon />-
             </ListItemIcon>
             <ListItemText primary="Leads" />
           </ListItemButton>
+          
           <ListItemButton onClick={() => navigate("/lead")}>
             <ListItemIcon>
               <ShoppingCartIcon />

@@ -104,7 +104,7 @@ export default function Lead() {
                       type="text"
                       className="form-control"
                       name="fname"
-                      placeholder="First Name"
+                      placeholder="Mobile"
                     />
                   </td>
                   <td>
@@ -112,13 +112,13 @@ export default function Lead() {
                       type="text"
                       className="form-control"
                       name="mname"
-                      placeholder="Middle Name"
+                      placeholder="Address"
                     />
                   </td>
                   <td>
                     <select className="form-control">
                       <option selected="selected" disabled="disableds">
-                        Select Option
+                        Select Branch
                       </option>
                       <option value="1">1</option>
                       <option value="1">1</option>
@@ -153,7 +153,7 @@ export default function Lead() {
                   <td>
                     <select className="form-control">
                       <option selected="selected" disabled="disableds">
-                        Select Option
+                        Select Lead Source
                       </option>
                       <option value="1">1</option>
                       <option value="1">1</option>

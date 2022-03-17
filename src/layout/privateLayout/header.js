@@ -151,14 +151,14 @@ const AppHeader = () => {
             <ListItemIcon>
               <PersonAddAltIcon />
             </ListItemIcon>
-            <ListItemText primary="Add Users" />
+            <ListItemText primary="Leads" />
           </ListItemButton>
 
           <ListItemButton onClick={() => navigate("/lead")}>
             <ListItemIcon>
               <ShoppingCartIcon />-
             </ListItemIcon>
-            <ListItemText primary="Leads" />
+            <ListItemText primary="add Leads" />
           </ListItemButton>
           
           <ListItemButton onClick={() => navigate("/lead")}>

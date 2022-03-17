@@ -5,4 +5,7 @@ export const middlePoints = "api";
 
 export const endPoints = {
   login: `${middlePoints}/identity/token`,
+  leads: `${middlePoints}/v1/Leads`,
 };
+
+

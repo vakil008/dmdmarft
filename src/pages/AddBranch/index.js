@@ -13,6 +13,8 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+
+
 const theme = createTheme();
 
 export default function AddBranch() {
@@ -29,7 +31,7 @@ export default function AddBranch() {
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xl">
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <Box
           sx={{
             marginTop: 8,
@@ -38,9 +40,9 @@ export default function AddBranch() {
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+          {/* <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
-          </Avatar>
+          </Avatar> */}
           <Typography component="h1" variant="h5">
             Add Branch
           </Typography>
